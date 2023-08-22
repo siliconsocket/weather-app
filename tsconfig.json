@@ -1,3 +1,37 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "target": "es2015",
+    "jsx": "react-native",
+    "noEmit": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "lib": ["es2015", "es2016"],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noImplicitAny": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "_atoms": ["./src/components/atoms"],
+      "_molecules": ["./src/components/molecules"],
+      "_organisms": ["./src/components/organisms"],
+      "_templates": ["./src/components/templates"],
+      "_views": ["./src/components/views"],
+      "_icons": ["./src/resources/icons"],
+      "_fonts": ["./src/resources/fonts"],
+      "_images": ["./src/resources/images"],
+      "_utils": ["./src/utils"],
+      "_navigators": ["./src/navigators"],
+      "_hooks": ["./src/hooks"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
 }

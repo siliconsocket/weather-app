@@ -9,8 +9,10 @@ const Home = ({}: Props) => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text>Hola Home</Text>
-      <Button mode="contained" onPress={() => navigation.navigate('Settings')}>
+      <Text>Hola Home Screen</Text>
+      <Button
+        mode="contained"
+        onPress={() => navigation.navigate('Settings', {hola: 'mundo'})}>
         Ir a settings
       </Button>
       <Button mode="contained" onPress={() => navigation.navigate('Profile')}>

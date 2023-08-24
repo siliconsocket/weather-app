@@ -1,17 +1,16 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
+import {TStackNavigatorProps} from '_types';
 import {Home, Profile, Settings} from '_views';
 
-type Props = {};
+const Stack = createStackNavigator<TStackNavigatorProps>();
 
-const Stack = createStackNavigator();
-
-const StackNavigator = ({}: Props) => {
+const StackNavigator = ({}) => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Settings" component={Settings} />
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen component={Home} name="Home" />
+      <Stack.Screen component={Profile} name="Profile" />
+      <Stack.Screen component={Settings} name="Settings" />
     </Stack.Navigator>
   );
 };

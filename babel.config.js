@@ -32,6 +32,7 @@ module.exports = {
           _utils: './src/utils/',
           _navigators: './src/navigators/',
           _hooks: './src/hooks/',
+          _types: './src/types/',
         },
       },
     ],

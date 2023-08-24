@@ -25,7 +25,8 @@
       "_images": ["./src/resources/images"],
       "_utils": ["./src/utils"],
       "_navigators": ["./src/navigators"],
-      "_hooks": ["./src/hooks"]
+      "_hooks": ["./src/hooks"],
+      "_types": ["./src/types"]
     }
   },
   "exclude": [

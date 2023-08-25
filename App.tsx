@@ -2,7 +2,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {StatusBar} from 'react-native';
 import {PaperProvider} from 'react-native-paper';
-import {StackNavigator} from '_navigators';
+import {BottomTabNavigator} from '_navigators';
 
 type Props = {};
 
@@ -14,7 +14,7 @@ const App = () => {
         backgroundColor="transparent"
         barStyle={'dark-content'}
       />
-      <StackNavigator />
+      <BottomTabNavigator />
     </>
   );
 };

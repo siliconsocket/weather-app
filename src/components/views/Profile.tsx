@@ -3,19 +3,19 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Button} from 'react-native-paper';
+import {HOME_NAVIGATOR} from 'src/navigators/navNames';
 import {TStackNavigatorProps} from '_types';
 
 type Props = {};
 
 const Profile = ({}: Props) => {
-  const navigation =
-    useNavigation<StackNavigationProp<TStackNavigatorProps, 'Settings'>>();
+  const navigation = useNavigation<StackNavigationProp<TStackNavigatorProps>>();
   return (
     <View style={styles.container}>
       <Text>Hola Profile</Text>
       <Button
         mode="contained"
-        onPress={() => navigation.navigate('Settings', {hola: false})}>
+        onPress={() => navigation.navigate(HOME_NAVIGATOR.SETTINGS)}>
         Ir a settings
       </Button>
     </View>

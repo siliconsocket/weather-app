@@ -5,6 +5,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {Button} from 'react-native-paper';
 import {HOME_NAVIGATOR} from 'src/navigators/navNames';
 import {TStackNavigatorProps} from '_types';
+import {API_URL} from '@env';
 
 type Props = {};
 
@@ -13,6 +14,7 @@ const Main = ({}: Props) => {
   return (
     <View style={styles.container}>
       <Text>Hola Home Screen</Text>
+      <Text>{`API_URL: ${API_URL}`}</Text>
       <Button
         mode="contained"
         onPress={() => navigation.navigate(HOME_NAVIGATOR.SETTINGS)}>

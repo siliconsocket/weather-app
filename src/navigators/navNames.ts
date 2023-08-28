@@ -1,9 +1,11 @@
 export enum BOTTOM_TAB_NAV {
   HOME_NAVIGATOR = 'BottomTabNavigator@HomeNavigator',
+  EXTRA_NAVIGATOR = 'BottomTabNavigator@ExtraNavigator',
 }
 
 export const BOTTOM_TAB_NAV_LABEL: {[key in BOTTOM_TAB_NAV]: string} = {
   [BOTTOM_TAB_NAV.HOME_NAVIGATOR]: 'Inicio',
+  [BOTTOM_TAB_NAV.EXTRA_NAVIGATOR]: 'Extra',
 };
 
 export enum HOME_NAVIGATOR {

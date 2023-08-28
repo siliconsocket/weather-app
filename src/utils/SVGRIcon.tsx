@@ -2,9 +2,10 @@ import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
 
 import * as Icons from '_icons';
+import {ICON} from '_icons';
 
 type Props = {
-  iconName: string;
+  iconName: ICON;
   iconStyle?: StyleProp<ViewStyle>;
   iconSize?: number;
   fill?: string;

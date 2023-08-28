@@ -7,13 +7,17 @@ import {ICON} from '_icons';
 import {BOTTOM_TAB_NAV, BOTTOM_TAB_NAV_LABEL} from '_navigators';
 import {TBottomTabNavigatorProps} from '_types';
 import {SVGRIcon} from '_utils';
+import { Settings } from '_views';
 import StackNavigator from './StackNavigator';
 
 function CustomTabBar({state, descriptors, navigation}) {
-  const renderIcon = (routeName: string, isFocused = false) => {
+  const renderIcon = (routeName: BOTTOM_TAB_NAV, isFocused = false) => {
     const fillColor = isFocused ? 'red' : 'blue';
     switch (routeName) {
+      case BOTTOM_TAB_NAV.EXTRA_NAVIGATOR:
+        return <SVGRIcon fill={fillColor} iconName={ICON.SETTINGS} />;
       case BOTTOM_TAB_NAV.HOME_NAVIGATOR:
+        return <SVGRIcon fill={fillColor} iconName={ICON.HOME} />;
       default:
         return <SVGRIcon fill={fillColor} iconName={ICON.HOME} />;
     }
@@ -70,6 +74,11 @@ const BottomTabNavigator = ({}) => {
       <Tab.Screen
         component={StackNavigator}
         name={BOTTOM_TAB_NAV.HOME_NAVIGATOR}
+        options={{title: BOTTOM_TAB_NAV_LABEL[BOTTOM_TAB_NAV.HOME_NAVIGATOR]}}
+      />
+      <Tab.Screen
+        component={Settings}
+        name={BOTTOM_TAB_NAV.EXTRA_NAVIGATOR}
         options={{title: BOTTOM_TAB_NAV_LABEL[BOTTOM_TAB_NAV.HOME_NAVIGATOR]}}
       />
     </Tab.Navigator>

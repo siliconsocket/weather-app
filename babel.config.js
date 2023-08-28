@@ -6,6 +6,14 @@ module.exports = {
   plugins: [
     ['optional-require'],
     [
+      'module:react-native-dotenv',
+      {
+        safe: true,
+        envName: 'APP_ENV',
+        allowlist: ['API_URL', 'API_KEY'],
+      },
+    ],
+    [
       'module-resolver',
       {
         root: ['.'],

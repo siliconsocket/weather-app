@@ -13,6 +13,7 @@
     "noImplicitAny": false,
     "strict": true,
     "esModuleInterop": true,
+    "typeRoots": ["./src/types"],
     "baseUrl": "./",
     "paths": {
       "_atoms": ["./src/components/atoms"],
